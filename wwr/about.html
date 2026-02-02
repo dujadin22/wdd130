@@ -4,24 +4,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>About Us - White Water Rafting Co.</title>
-    <meta name="description" content="Michael Felix's BYU-Idaho WDD 130 course home page.">
+    <title>About Us - White Water Rafting Co.</title>
+    <meta name="description"
+      content="Learn about White Water Rafting Co. - our history, mission, and adventure trips.">
     <meta name="author" content="Michael Felix">
     <link rel="stylesheet" href="styles/rafting.css">
 </head>
+
 <body>
 
-    <!-- Header -->
+    <!-- Header with Grid layout -->
     <header>
-        <img src="images/adven2.jpg" alt="Rafting Company Logo">
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About Us</a></li>
-                <li><a href="trips.html">Trips</a></li>
-                <li><a href="contact.html">Contact Us</a></li>
-            </ul>
-        </nav>
+        <div class="header-grid">
+            <img src="images/adven2.jpg" alt="White Water Rafting Company Logo" width="150">
+            <nav>
+                <ul class="nav-flex">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="trips.html">Trips</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
     <main>
@@ -29,59 +33,77 @@
         <!-- Hero Section -->
         <div class="hero">
             <img src="images/hero.jpg" alt="Rafting adventure on a wild river">
-
-            <h1>About Us - White Water Rafting Co.</h1>
-
+            <h1>White Water Rafting Co.</h1>
             <article>
                 <img src="images/happy-client.jpg" alt="Happy rafting client">
                 <p>
                     Our rafting company exists to inspire adventure, teamwork, and a deep respect
                     for nature through exciting river experiences. We are committed to providing
                     safe, well-guided trips that create lasting memories for individuals, families,
-                    and groups. Our mission is to combine fun, professionalism, and environmental
-                    responsibility while encouraging confidence and collaboration among our guests.
-                    We believe every journey on the river is an opportunity to learn, connect, and
-                    challenge oneself. With passionate guides and a strong sense of purpose, we aim
-                    to deliver unforgettable adventures that leave our guests energized, fulfilled,
-                    and eager to return.
+                    and groups.
                 </p>
             </article>
         </div>
 
-        <!-- History Section -->
-        <section>
+        <!-- History Section with 3-column layout -->
+        <section class="history-section">
             <h2>History</h2>
-            <p>
-                Founded many years ago beside winding rivers and shifting currents, the company
-                began with a small crew of dreamers, boats, and borrowed gear. Over time, stories
-                grew taller, paddles moved faster, and laughter echoed across the water. Seasons
-                passed, routes changed, and traditions formed, shaping a company built on movement,
-                curiosity, and shared adventure. Though the years blended together, the spirit of
-                exploration remained constant, flowing forward like the river itself.
-            </p>
+            <div class="history-content">
+                <p>
+                    Founded many years ago beside winding rivers and shifting currents, the company
+                    began with a small crew of dreamers, boats, and borrowed gear. Over time,
+                    stories
+                    grew taller, paddles moved faster, and laughter echoed across the water.
+
+                    Seasons passed, routes changed, and traditions formed, shaping a company built
+                    on movement,
+                    curiosity, and shared adventure. Though the years blended together, the spirit
+                    of
+                    exploration remained constant, flowing forward like the river itself.
+                </p>
+            </div>
         </section>
 
-        <!-- Adventure Section -->
-        <section>
+        <!-- Adventure Section with 5 images in figures -->
+        <section class="adventure-section">
             <h2>Adventure Awaits You!</h2>
+            <div class="adventure-gallery">
+                <figure>
+                    <img src="images/one.jpg" alt="Los Dientes del Diablo rapids">
+                    <figcaption>Los Dientes del Diablo</figcaption>
+                </figure>
+                <figure>
+                    <img src="images/two.jpg" alt="Big Mallard river run">
+                    <figcaption>Big Mallard</figcaption>
+                </figure>
+                <figure>
+                    <img src="images/three.jpg" alt="Half Day Adventure trip">
+                    <figcaption>Half Day Adventure</figcaption>
+                </figure>
+                <figure>
+                    <img src="images/four.jpg" alt="Colorado River expedition">
+                    <figcaption>Colorado River</figcaption>
+                </figure>
+                <figure>
+                    <img src="images/five.jpg" alt="Sunset Rafting experience">
+                    <figcaption>Sunset Rafting</figcaption>
+                </figure>
+            </div>
         </section>
 
     </main>
 
-    <!-- Footer -->
+    <!-- Footer with social links aligned to the right -->
     <footer>
-        <p>&copy; 2026 White Water Rafting Co.</p>
-
-        <nav class="socialmedia">
-            <a href="https://facebook.com">
+        <p>&copy; 2026 White Water Rafting Co. | Michael Felix</p>
+        <nav class="social-links">
+            <a href="https://facebook.com" target="_blank" aria-label="Facebook">
                 <img src="images/facebook.png" alt="Facebook">
             </a>
-
-            <a href="https://x.com/">
+            <a href="https://x.com/" target="_blank" aria-label="Twitter">
                 <img src="images/twitter.png" alt="Twitter">
             </a>
-
-            <a href="https://www.instagram.com/">
+            <a href="https://www.instagram.com/" target="_blank" aria-label="Instagram">
                 <img src="images/instagram.png" alt="Instagram">
             </a>
         </nav>
