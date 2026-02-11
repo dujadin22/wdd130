@@ -2,7 +2,7 @@
    CONTACT PAGE STYLES 
    ============================================ */
 
-/* 1. Address Section - Centered at the top */
+/* 1. Address Section */
 .contact-header {
     text-align: center;
     margin: 20px 0 40px;
@@ -16,26 +16,23 @@
     margin: 5px 0;
 }
 
-/* 2. Map & Form - Two Column Grid */
+/* 2. Map & Form Grid */
 .contact-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    /* Two equal columns */
     gap: 40px;
     margin-bottom: 50px;
     align-items: start;
 }
 
-/* Target the iframe for the Google Map */
 .map-container iframe {
     width: 100%;
     height: 450px;
-    /* Provides vertical size for the map */
-    border: 1px solid #ccc;
+    border: 1px solid var(--secondary-color, #ccc); /* Uses variable with fallback */
     display: block;
 }
 
-/* 3. Form Layout - Alignment with Wireframe */
+/* 3. Form Layout */
 form {
     display: flex;
     flex-direction: column;
@@ -45,7 +42,6 @@ form {
 .form-item {
     display: grid;
     grid-template-columns: 80px 1fr;
-    /* Fixed width for labels */
     align-items: center;
     gap: 10px;
 }
@@ -53,22 +49,20 @@ form {
 .form-item input,
 .form-item textarea {
     padding: 8px;
-    border: 1px solid #777;
+    border: 1px solid var(--text-color, #777);
     border-radius: 4px;
     width: 100%;
 }
 
 .form-item textarea {
     height: 100px;
-    /* Matches the larger message box */
 }
 
-/* Aligns Purpose, Newsletter, and Button to the second column */
+/* Grouped alignment to reduce declaration count */
 .radio-group,
 .checkbox-group,
 .submit-btn {
     grid-column: 2;
-    /* Aligns under the input fields */
 }
 
 .radio-group {
@@ -85,21 +79,20 @@ form {
 
 .submit-btn {
     padding: 12px;
-    background-color: #eee;
-    border: 1px solid #777;
+    background-color: var(--accent-color, #eee);
+    border: 1px solid var(--text-color, #777);
     cursor: pointer;
     font-weight: bold;
     transition: background-color 0.3s ease;
 }
 
 .submit-btn:hover {
-    background-color: #ddd;
+    background-color: var(--secondary-color, #ddd);
 }
 
-/* 4. Employee Section - Three Column Grid */
+/* 4. Employee Section */
 .employee-section {
-    border: 1px solid #000;
-    /* Outer box from wireframe */
+    border: 1px solid var(--primary-color, #000);
     padding: 20px;
     text-align: center;
     margin-bottom: 40px;
@@ -112,7 +105,6 @@ form {
 .employee-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    /* Three equal columns */
     gap: 20px;
 }
 
@@ -124,10 +116,6 @@ form {
     width: 150px;
     height: 150px;
     object-fit: cover;
-    background-color: #e0e0e0;
+    background-color: var(--accent-color, #e0e0e0);
     margin-bottom: 10px;
-}
-
-.employee-grid figcaption {
-    font-weight: 500;
 }
