@@ -23,7 +23,7 @@
 .map-container iframe {
     width: 100%;
     height: 450px;
-    border: 1px solid var(--accent-color);
+    border: 1px solid var(--primary-blue);
     display: block;
 }
 
@@ -44,7 +44,7 @@ form {
 .form-item input,
 .form-item textarea {
     padding: 8px;
-    border: 1px solid var(--secondary-color);
+    border: 1px solid var(--text-dark);
     border-radius: 4px;
 }
 
@@ -64,22 +64,25 @@ form {
     padding: 10px 0;
 }
 
+/* FIX: Violation #2 - Changed to white text on blue/orange background */
 .submit-btn {
     padding: 12px;
-    background-color: var(--accent-color);
-    border: 1px solid var(--secondary-color);
+    background-color: var(--primary-blue); /* Using your primary blue variable */
+    color: var(--white);                  /* High contrast white text (Passes AA) */
+    border: none;
     cursor: pointer;
     font-weight: bold;
     transition: background 0.3s;
 }
 
 .submit-btn:hover {
-    background-color: #ddd; /* Subtle darken */
+    background-color: var(--accent-orange); /* Swaps to orange on hover for feedback */
+    color: var(--white);
 }
 
 /* 4. Employee Section */
 .employee-section {
-    border: 1px solid var(--black);
+    border: 1px solid var(--primary-blue);
     padding: 20px;
     text-align: center;
     margin-bottom: 40px;
@@ -95,6 +98,6 @@ form {
     width: 150px;
     height: 150px;
     object-fit: cover;
-    background-color: var(--accent-color);
+    background-color: var(--light-bg);
     margin-bottom: 10px;
 }
