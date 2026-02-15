@@ -1,0 +1,163 @@
+/* ============================================
+   TRIPS PAGE SPECIFIC LAYOUT
+   ============================================ */
+
+/* Main Container Constraint */
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 3rem 20px;
+}
+
+.adventure-intro {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.adventure-intro h1 {
+    font-size: 2.5rem;
+    color: var(--primary-blue);
+    margin-bottom: 1rem;
+}
+
+/* --- THE GALLERY GRID (3-Columns) --- */
+.adventure-gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    /* Non-single column requirement */
+    gap: 30px;
+    margin: 3rem 0;
+}
+
+.adventure-gallery figure {
+    background-color: var(--white);
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.adventure-gallery figure:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.adventure-gallery img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    /* Keeps images consistent */
+}
+
+.adventure-gallery figcaption {
+    padding: 1.5rem;
+}
+
+.adventure-gallery h3 {
+    color: var(--primary-blue);
+    margin-bottom: 10px;
+    border-bottom: 2px solid var(--accent-orange);
+    display: inline-block;
+}
+
+/* --- THE COMPARISON TABLE --- */
+.trips-table-container {
+    margin-top: 5rem;
+}
+
+.trips-table-container h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: var(--primary-blue);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+th {
+    background-color: var(--primary-blue);
+    color: white;
+    padding: 1.2rem;
+    text-align: left;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+}
+
+td {
+    padding: 1.2rem;
+    border-bottom: 1px solid #edf2f7;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f8fafc;
+    /* Zebra Striping */
+}
+
+tbody tr:hover {
+    background-color: #f1f5f9;
+}
+
+/* --- MOBILE RESPONSIVE --- */
+@media (max-width: 800px) {
+    .adventure-gallery {
+        grid-template-columns: 1fr;
+        /* Stacks on small screens */
+    }
+}
+
+/* Table-specific button styling */
+.btn-cta-table {
+    background-color: var(--accent-orange);
+    color: var(--white);
+    padding: 6px 12px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    border-radius: 4px;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+    white-space: nowrap;
+}
+
+.btn-cta-table:hover {
+    background-color: var(--primary-blue);
+}
+
+/* Align the last column to the center */
+td:last-child {
+    text-align: center;
+}
+
+/* --- Standard CTA Button (For the Top Section) --- */
+.btn-cta {
+    background-color: var(--accent-orange);
+    color: var(--white);
+    padding: 15px 30px;
+    text-decoration: none;
+    /* Removes the default link underline */
+    font-weight: bold;
+    text-transform: uppercase;
+    border-radius: 5px;
+    display: inline-block;
+    /* Essential for padding to work */
+    margin-top: 1rem;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.btn-cta:hover {
+    background-color: var(--primary-blue);
+    color: var(--white);
+    transform: translateY(-2px);
+    /* Subtle lift effect */
+}
